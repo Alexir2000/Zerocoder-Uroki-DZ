@@ -9,16 +9,19 @@ class Weapon(ABC):
 class Luk(Weapon):
     def __init__(self, name):
         self.name = name
+        self.udar = "натягивает тетиву и стреляет"
     def attack(self):
         pass
 class Mech(Weapon):
     def __init__(self, name):
         self.name = name
+        self.udar = "рубит врага"
     def attack(self):
         pass
 class Kopiyo(Weapon):
     def __init__(self, name):
         self.name = name
+        self.udar = "метает в цель"
     def attack(self):
         pass
 
@@ -31,7 +34,7 @@ class Fighter():
         print(f"{self.name} выбирает {self.weapon.name}")
     def attack(self):
         self.weapon.attack()
-        print(f"{self.name} берет {self.weapon.name} и наносит удар!")
+        print(f"{self.name} берет {self.weapon.name} и {self.weapon.udar}")
 
 class Monster():
     def __init__(self, name):
