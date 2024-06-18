@@ -10,6 +10,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
+<!--задаем всему экраны серенький цвет-->
 <body style="background-color: #f8f9fa;">
 
 <div class="container mt-5">
@@ -49,6 +50,8 @@
                     <h4 class="card-title">Город: {{ anketa.gorod }}</h4>
                     <h4 class="card-title">Возраст: {{ anketa.vozrast }}</h4>
                     <h5 class="card-title">Хобби: </h5>
+<!--                    для хобби мы используем фильтр замены перевода строки на <br>-->
+<!--                    так как перевод строки в html не работает-->
                     <p class="card-text">{{ anketa.hobby  | nl2br }}</p>
                 </div>
             </div>
